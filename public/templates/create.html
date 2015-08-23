@@ -1,0 +1,16 @@
+<div id="create" class="ui main container" ng-controller="Create">
+	<div class="ui form">
+		<div class="field">
+			<input type="text" ng-model="user.username" placeholder='username'>	
+		</div>
+		<div class="field">
+			<input type="password" ng-model="user.password" placeholder='password'>	
+		</div>
+		<div class="field">
+			<input type="number" ng-model="user.balance" placeholder='balance'>	
+		</div>
+		<div class="ui submit button inverted green" ng-click="create()">
+			创建
+		</div> 
+	</div>
+</div>

@@ -1,0 +1,26 @@
+<div class="ui grid" ng-controller="Profile">
+	<div class="row">
+		<div class="four wide column">
+			<div class="ui card container">
+			    <div class="dimmable image dimmed">
+			        <img src="/img/elliot.jpg">
+			    </div>
+			    <div class="content">
+			        <div class="header">
+			            {{user.username}}
+			        </div>
+			        <div class="meta">
+			        	{{user._id}}
+			        </div>
+			        <div class="meta">
+			        	Balance : {{user.balance}}
+			        </div>
+			    </div>
+			</div>
+		</div>
+		<div class="twelve wide column">
+			<iframe ng-src="{{url}}"></iframe>
+		</div>
+	</div>
+</div>
+

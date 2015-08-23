@@ -1,0 +1,28 @@
+doctype html
+html(ng-app='crowd')
+	head
+		title= title
+		link(rel='stylesheet', href='/vendor/semantic-ui/dist/semantic.min.css')
+		link(rel='stylesheet', href='/css/style.css')
+		script.
+			var crowd = {
+				login : #{_setting.login ? true : false},
+				role : '#{_setting.role}',
+				uid : '#{_setting.uid}',
+				username : '#{_setting.username}',
+				balance : '#{_setting.balance}'
+			}
+	body
+		div.ui.menu.inverted.fixed
+			div.ui.container
+				a(href="/logout", ng-show="userLogin.login").item.right.floated 注销
+
+		block content
+		
+		script(type='text/javascript', src="/vendor/jquery/jquery.js")
+		script(type='text/javascript', src="/vendor/angular/angular.js")
+		script(type='text/javascript', src="/vendor/ui-router/release/angular-ui-router.js")
+		script(type='text/javascript', src="/vendor/semantic-ui/dist/semantic.min.js")
+		script(type='text/javascript', src="/js/main.js")
+		script(type='text/javascript', src="/js/directives.js")
+		script(type='text/javascript', src="/js/services.js")

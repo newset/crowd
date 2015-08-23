@@ -1,0 +1,11 @@
+extend layout
+
+block content
+	form(action="/api", method="post", ng-controller="Api").ui.form
+		div.field
+			input(name='uid', placeholder="uid", ng-model="load.uid")
+		div.field
+			input(name='amount', type='number', placeholder="amount", ng-model="load.amount")
+		div.field
+			input(name='adjusted_amount', type='number', placeholder="adjusted_amount", ng-model="load.adjusted_amount")
+		div(ng-click="send()").ui.button.inverted.blue 发送
