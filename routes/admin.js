@@ -13,7 +13,6 @@ module.exports = function(app){
 				user.save();
 			};
 
-			// user.password = undefined;
 			res.send({
 				'status' : 200,
 				'user' : {
