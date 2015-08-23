@@ -5,7 +5,7 @@
 * Nodejs.
 
 ###  检出并运行
-	mpn install && bower install
+	npm install && bower install
     
 移动服务器
 	npm start 
