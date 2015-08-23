@@ -68,6 +68,10 @@ angular.module('crowd', ['ui.router'])
 		}
 	}])
 	.controller('Create', ['$state', 'CrowdFlower', 'Session', '$scope', function ($state, CrowdFlower, Session, $scope) {
+		if(crowd.role != 'admin'){
+			$state.go('home');
+		}
+		
 		$scope.create = function(){
 			CrowdFlower.create($scope.user).success(function(res){
 				$state.go('profile', {uid : res.user._id});
