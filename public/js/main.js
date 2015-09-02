@@ -25,7 +25,7 @@ angular.module('crowd', ['ui.router'])
 
 		$urlRouterProvider.otherwise('/login')
 	}])
-	.run(['$rootScope', '$state', function ($rootScope, $state) {
+	.run(['$rootScope', '$state', '$http', function ($rootScope, $state, $http) {
 		$rootScope.userLogin = {
 			login : crowd.login,
 			role : crowd.role,
