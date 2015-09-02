@@ -16,7 +16,6 @@
     "jquery" : "1.9.0",
     "semantic-ui": "~2.0.8",
     "angular": "~1.4.4",
-    "angular-ui-router" : "*",
-    "angular-mock" : "*"
+    "angular-ui-router" : "*"
   }
 }
